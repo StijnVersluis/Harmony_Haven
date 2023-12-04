@@ -5,17 +5,25 @@ using UnityEngine;
 public class DepthAdjust : MonoBehaviour
 {
     private GameObject player;
+    private BoxCollider2D box;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        box = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < player.transform.position.y) 
+        Vector3 position = transform.position;
+        if (box) position = new Vector3(
+            position.x + box.offset.x * transform.localScale.x,
+            position.y + box.offset.y * transform.localScale.y,
+            position.z);
+
+        if (position.y < player.transform.position.y) 
             transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
         else 
             transform.position = new Vector3(transform.position.x, transform.position.y, 0.1f);
