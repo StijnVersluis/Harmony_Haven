@@ -23,9 +23,8 @@ public class DepthAdjust : MonoBehaviour
             position.y + box.offset.y * transform.localScale.y,
             position.z);
 
-        if (position.y < player.transform.position.y) 
-            transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
-        else 
-            transform.position = new Vector3(transform.position.x, transform.position.y, 0.1f);
+        float distance = position.y - player.transform.position.y;
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0.1f * distance / 64f);
     }
 }
