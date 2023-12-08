@@ -11,10 +11,4 @@ public class ScaleCanvas : MonoBehaviour
         canvas.worldCamera = Camera.main;
         canvas.planeDistance = 5f;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

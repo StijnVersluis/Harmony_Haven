@@ -9,11 +9,14 @@ public class NPCInteract : MonoBehaviour
     public KeyCode interactKey = KeyCode.E;
     public SceneAsset DialogBoxScene;
 
+    public string NPCName;
+
     bool inRangeOfNPC = false;
+    GameObject speachBubble;
     // Start is called before the first frame update
     void Start()
     {
-        
+        speachBubble = gameObject.transform.Find("SpeachBubbleDots").gameObject;
     }
 
     // Update is called once per frame
@@ -24,11 +27,16 @@ public class NPCInteract : MonoBehaviour
 
     void HandleNPCInteraction()
     {
-        SceneManager.LoadScene(DialogBoxScene.name, LoadSceneMode.Additive);
+        if (!SceneManager.GetSceneByName(DialogBoxScene.name).isLoaded)
+        {
+            PlayerPrefs.SetString("NpcName", NPCName);
+            SceneManager.LoadScene(DialogBoxScene.name, LoadSceneMode.Additive);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        speachBubble.SetActive(true);
         if (collision.gameObject.layer == 3) inRangeOfNPC = true;
     }
 
@@ -36,5 +44,6 @@ public class NPCInteract : MonoBehaviour
     {
         if (collision.gameObject.layer == 3) inRangeOfNPC = false;
         if (SceneManager.GetSceneByName(DialogBoxScene.name).isLoaded) SceneManager.UnloadSceneAsync(DialogBoxScene.name);
+        speachBubble.SetActive(false);
     }
 }

@@ -18,13 +18,16 @@ public class DepthAdjust : MonoBehaviour
     void Update()
     {
         Vector3 position = transform.position;
-        if (box) position = new Vector3(
+        if (box)
+        {
+            position = new Vector3(
             position.x + box.offset.x * transform.localScale.x,
-            position.y + box.offset.y * transform.localScale.y,
+            position.y + (box.offset.y - box.size.y / 2f) * transform.localScale.y,
             position.z);
+        }
+        BoxCollider2D playerBox = player.GetComponent<BoxCollider2D>();
+        float distance = position.y - (player.transform.position.y + playerBox.offset.y - playerBox.size.y / 2f);
 
-        float distance = position.y - player.transform.position.y;
-
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0.1f * distance / 64f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0.1f * distance / 8f);
     }
 }
