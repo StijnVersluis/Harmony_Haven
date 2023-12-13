@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -10,7 +12,21 @@ public class CanvasManager : MonoBehaviour
     void Start()
     {
         string NpcName = PlayerPrefs.GetString("NpcName");
-        TextMeshProUGUI NpcNameObj = FindObjectsOfType<TextMeshProUGUI>().First(textObj => { return textObj.name == "NPCNameText"; });
+        string NpcText = PlayerPrefs.GetString("NpcText");
+        TextMeshProUGUI NpcNameObj = FindObjectsOfType<TextMeshProUGUI>().First(textObj => { return textObj.name.Contains("NPCNameText"); });
+        TextMeshProUGUI NpcDialogObj = FindObjectsOfType<TextMeshProUGUI>().First(textObj => { return textObj.name.Contains("NPCDialogueText"); });
         NpcNameObj.text = NpcName;
+        NpcDialogObj.text = NpcText.Replace("{{name}}", NpcName);
+    }
+
+    public void TalkOptionButtonClick()
+    {
+
+    }
+
+    public void CloseDialogButtonClick()
+    {
+        string sceneName = "DialogBox";
+        if (SceneManager.GetAllScenes().ToList().Any(scene => scene.name == sceneName)) SceneManager.UnloadScene(sceneName);
     }
 }

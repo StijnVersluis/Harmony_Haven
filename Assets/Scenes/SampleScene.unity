@@ -774,6 +774,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1715235881}
     m_Modifications:
+    - target: {fileID: 498501613332702550, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498501613332702550, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3511185092878994108, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
       propertyPath: m_Name
       value: HousePrefab
@@ -1827,7 +1835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154215906379115400, guid: 0f7a4b9127ae7444f8b352f1debc7139, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.085
+      value: 1.317
       objectReference: {fileID: 0}
     - target: {fileID: 7154215906379115400, guid: 0f7a4b9127ae7444f8b352f1debc7139, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93737,6 +93745,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1970071691265764194, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3511185092878994108, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
       propertyPath: m_Name
       value: HousePrefab (5)
@@ -93796,6 +93808,14 @@ PrefabInstance:
     - target: {fileID: 3797916357723193617, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
       propertyPath: m_Size.x
       value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329133111677033143, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329133111677033143, guid: 65a20729228f0dd46b4dc8a0c2c6c77c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -95806,7 +95826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1619030269702953884, guid: 5f556d72803fdb64dbe9b53ebd1f7f2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.085
+      value: 1.3170002
       objectReference: {fileID: 0}
     - target: {fileID: 1619030269702953884, guid: 5f556d72803fdb64dbe9b53ebd1f7f2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -96739,6 +96759,10 @@ PrefabInstance:
       propertyPath: NPCName
       value: Dhead McGee
       objectReference: {fileID: 0}
+    - target: {fileID: 3552078556750330344, guid: 56b31972f8d9fda4e87eed31714d50a5, type: 3}
+      propertyPath: NPCDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: eaf22f9c7ffa9354a934ef40b1ec4c04, type: 2}
     - target: {fileID: 4445772573817631890, guid: 56b31972f8d9fda4e87eed31714d50a5, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
