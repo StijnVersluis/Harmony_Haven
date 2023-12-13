@@ -27,6 +27,6 @@ public class CanvasManager : MonoBehaviour
     public void CloseDialogButtonClick()
     {
         string sceneName = "DialogBox";
-        if (SceneManager.GetAllScenes().ToList().Any(scene => scene.name == sceneName)) SceneManager.UnloadScene(sceneName);
+        SceneManager.UnloadSceneAsync(sceneName);
     }
 }
