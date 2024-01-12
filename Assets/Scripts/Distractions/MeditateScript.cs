@@ -25,7 +25,7 @@ public class MeditateScript : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(InteractKey))
         {
-            playerCharacter.transform.position = new Vector3(-1.5f, 1.3f);
+            playerCharacter.transform.position = new Vector3(-16.06f, -0.95f);
             StartMeditation();
         }
     }
