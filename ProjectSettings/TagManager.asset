@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPCDialog
-  - PlayerCharacter
-  - door2
   layers:
   - Default
   - TransparentFX
@@ -43,7 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Door
-    uniqueID: 268084803
     locked: 0
