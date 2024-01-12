@@ -5,6 +5,10 @@ using UnityEngine;
 public class HouseScript : MonoBehaviour
 {
     public SpriteRenderer fgRenderer;
+    void Start()
+    {
+
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,4 +24,5 @@ public class HouseScript : MonoBehaviour
             fgRenderer.enabled = true;
         }
     }
+    
 }
