@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogBox.unity
     guid: 157da7ae1a19aef44861692bfd20196e
-  - enabled: 1
-    path: Assets/Scenes/MeditationBox.unity
-    guid: 9e2c897c941d07b46a62456c78bc235f
   m_configObjects: {}
