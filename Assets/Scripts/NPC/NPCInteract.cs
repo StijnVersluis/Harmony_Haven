@@ -13,7 +13,6 @@ public class NPCInteract : MonoBehaviour
 
     bool inRangeOfNPC = false;
     GameObject speachBubble;
-    public NPCDialogueTreeScriptableObject NPCDialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +30,6 @@ public class NPCInteract : MonoBehaviour
         if (!SceneManager.GetSceneByName(DialogBoxScene.name).isLoaded)
         {
             PlayerPrefs.SetString("NpcName", NPCName);
-            PlayerPrefs.SetString("NpcText", NPCDialogue.dialogue.dialogue);
             SceneManager.LoadScene(DialogBoxScene.name, LoadSceneMode.Additive);
         }
     }
