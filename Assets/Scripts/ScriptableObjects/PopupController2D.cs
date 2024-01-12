@@ -3,12 +3,16 @@ using UnityEngine;
 public class PopupController2D : MonoBehaviour
 {
     public GameObject popup;
+   
+
 
     private void Start()
-    {
+    {   
         popup.SetActive(false); 
+    
+      
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
        
