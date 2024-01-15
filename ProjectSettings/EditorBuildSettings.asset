@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MeditationBox.unity
     guid: 9e2c897c941d07b46a62456c78bc235f
+  - enabled: 1
+    path: Assets/Scenes/BookScene.unity
+    guid: 09d8d6a8e4a35024c85b03f910d76af6
   m_configObjects: {}

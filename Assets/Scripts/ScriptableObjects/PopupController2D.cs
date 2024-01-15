@@ -1,46 +1,52 @@
+using System.Security.Cryptography.X509Certificates;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PopupController2D : MonoBehaviour
 {
-    public GameObject popup;
-   
+    public SceneAsset BookScene;
+    public KeyCode InteractKey = KeyCode.E;
 
+    private bool inRange = false;
 
     private void Start()
-    {   
-        popup.SetActive(false); 
-    
-      
+    {
     }
-    
+
+    private void Update()
+    {
+        if (inRange && Input.GetKeyDown(InteractKey))
+        {
+            ShowHidePopup();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
-        if (other.CompareTag("PlayerCharacter"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("touched");
-
-            ShowPopup();
-            
+            inRange = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("PlayerCharacter"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("exit");
-            HidePopup();
+            inRange = false;
+            SceneManager.UnloadSceneAsync(BookScene.name);
         }
     }
 
-    private void ShowPopup()
+    private void ShowHidePopup()
     {
-        popup.SetActive(true);
-    }
-
-    private void HidePopup()
-    {
-        popup.SetActive(false);
+        if (!SceneManager.GetSceneByName(BookScene.name).isLoaded)
+        {
+            SceneManager.LoadScene(BookScene.name, LoadSceneMode.Additive);
+        } else
+        {
+            SceneManager.UnloadSceneAsync(BookScene.name);
+        }
     }
 }
