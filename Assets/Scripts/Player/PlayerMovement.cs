@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject playerCharacter;
+
     Rigidbody2D body;
 
     Vector2 input;
@@ -35,13 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdatePlayerDirection(float horizontalDirection)
     {
-        if (horizontalDirection < 0) GameObject.Find("PlayerCharacter").GetComponent<SpriteRenderer>().flipX = true;
-        else if (horizontalDirection > 0) GameObject.Find("PlayerCharacter").GetComponent<SpriteRenderer>().flipX = false;
+        if (horizontalDirection < 0) playerCharacter.GetComponent<SpriteRenderer>().flipX = true;
+        else if (horizontalDirection > 0) playerCharacter.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void HandlePlayerAnimation()
     {
-        if (input.x != 0 || input.y != 0) GameObject.Find("PlayerCharacter").GetComponent<Animator>().SetBool("IsWalking", true);
-        else GameObject.Find("PlayerCharacter").GetComponent<Animator>().SetBool("IsWalking", false);
+        if (input.x != 0 || input.y != 0) playerCharacter.GetComponent<Animator>().SetBool("IsWalking", true);
+        else playerCharacter.GetComponent<Animator>().SetBool("IsWalking", false);
     }
 }
