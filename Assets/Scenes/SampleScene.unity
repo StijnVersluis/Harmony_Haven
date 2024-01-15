@@ -96292,7 +96292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3552078556750330344, guid: 56b31972f8d9fda4e87eed31714d50a5, type: 3}
       propertyPath: NPCName
-      value: Dhead McGee
+      value: Timmehh
       objectReference: {fileID: 0}
     - target: {fileID: 3552078556750330344, guid: 56b31972f8d9fda4e87eed31714d50a5, type: 3}
       propertyPath: NPCDialogue
