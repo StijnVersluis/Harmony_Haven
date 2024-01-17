@@ -12,12 +12,11 @@ public class NPCInteract : MonoBehaviour
     public string NPCName;
 
     bool inRangeOfNPC = false;
-    GameObject speachBubble;
+    public GameObject speachBubble;
     public NPCDialogueTreeScriptableObject NPCDialogue;
     // Start is called before the first frame update
     void Start()
     {
-        speachBubble = gameObject.transform.Find("SpeachBubbleDots").gameObject;
     }
 
     // Update is called once per frame

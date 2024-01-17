@@ -52,6 +52,7 @@ MonoBehaviour:
   interactKey: 101
   DialogBoxScene: {fileID: 102900000, guid: 157da7ae1a19aef44861692bfd20196e, type: 3}
   NPCName: D*ickhead McGee
+  speachBubble: {fileID: 7044624352105071931}
   NPCDialogue: {fileID: 0}
 --- !u!114 &7462681945229331563
 MonoBehaviour:
